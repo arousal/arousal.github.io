@@ -1,20 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
 
@@ -37,38 +45,27 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -80,24 +77,19 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
-
-
-
-
-<meta name="description" content="石头人对自己说说给自己听听十几年的互联网生涯却没有留下任何痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println">
+<meta name="description" content="说给自己听听近二十年的互联网生涯却没有留下什么痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println(&quot;This">
 <meta property="og:type" content="article">
 <meta property="og:title" content="石头人想说话">
 <meta property="og:url" content="http://arousal.github.io/2017/10/11/first/index.html">
 <meta property="og:site_name" content="打死我也不说">
-<meta property="og:description" content="石头人对自己说说给自己听听十几年的互联网生涯却没有留下任何痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println">
+<meta property="og:description" content="说给自己听听近二十年的互联网生涯却没有留下什么痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println(&quot;This">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-11T09:02:20.000Z">
+<meta property="og:updated_time" content="2017-10-11T09:28:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="石头人想说话">
-<meta name="twitter:description" content="石头人对自己说说给自己听听十几年的互联网生涯却没有留下任何痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println">
+<meta name="twitter:description" content="说给自己听听近二十年的互联网生涯却没有留下什么痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。  代码样式这个我喜欢，就是喜欢！12345class Person &amp;#123;	public static void main(String args[]) &amp;#123;		System.out.println(&quot;This">
 
 
 
@@ -105,10 +97,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -131,11 +125,7 @@
 
 
 
-  <title> 石头人想说话 | 打死我也不说 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>石头人想说话 | 打死我也不说</title>
   
 
 
@@ -145,18 +135,16 @@
 
 
 
+</head>
 
-
-
-
-
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -172,7 +160,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">保护自己，保护家人\n30年社会灌输的生存之道！</p>
+        <p class="site-subtitle">保护自己，保护家人<br/>30年前社会灌输的生存之道！</p>
       
   </div>
 
@@ -203,21 +191,11 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -249,7 +227,11 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://arousal.github.io/2017/10/11/first/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -267,14 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                石头人想说话
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">石头人想说话</h1>
         
 
         <div class="post-meta">
@@ -315,14 +290,16 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <h1 id="石头人对自己说"><a href="#石头人对自己说" class="headerlink" title="石头人对自己说"></a>石头人对自己说</h1><h3 id="说给自己听听"><a href="#说给自己听听" class="headerlink" title="说给自己听听"></a>说给自己听听</h3><p>十几年的互联网生涯却没有留下任何痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。</p>
+        <h3 id="说给自己听听"><a href="#说给自己听听" class="headerlink" title="说给自己听听"></a>说给自己听听</h3><p>近二十年的互联网生涯却没有留下什么痕迹，一直是在吸取互联网带来的福利，却没有在开放的角度对互联网做什么贡献，不想再给自己什么理由推辞，先建一个博客看自己坚持多久。</p>
 <hr>
 <h3 id="代码样式"><a href="#代码样式" class="headerlink" title="代码样式"></a>代码样式</h3><p>这个我喜欢，就是喜欢！<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"This is a great man!"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</div><div class="line">		<span class="built_in">print</span>(<span class="string">"This is a great man!"</span>)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -360,50 +337,32 @@
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
-
+    
 
     <footer class="post-footer">
       
 
       
-        
+      
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/10/11/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -413,15 +372,13 @@
     </div>
   </div>
 
-          
+
           </div>
           
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
+  
 
 
         </div>
@@ -437,63 +394,64 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Wooo" />
-          <p class="site-author-name" itemprop="name">Wooo</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Wooo</p>
               <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
           
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
         </div>
-        <nav class="site-state motion-element">
-        
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -506,7 +464,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#石头人对自己说"><span class="nav-number">1.</span> <span class="nav-text">石头人对自己说</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#说给自己听听"><span class="nav-number">1.0.1.</span> <span class="nav-text">说给自己听听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码样式"><span class="nav-number">1.0.2.</span> <span class="nav-text">代码样式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#说给自己听听"><span class="nav-number">1.</span> <span class="nav-text">说给自己听听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码样式"><span class="nav-number">2.</span> <span class="nav-text">代码样式</span></a></li></ol></div>
             
 
           </div>
@@ -526,30 +484,36 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Wooo</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+
+
 
 
         
+
+
+
+
+
+
 
         
       </div>
@@ -561,7 +525,7 @@
         
       </div>
     
-    
+
   </div>
 
   
@@ -581,6 +545,14 @@
 
 
   
+
+
+
+
+
+
+
+
 
 
 
@@ -607,37 +579,36 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
 
 
 
   
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
 
 
 
   
 
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
 
 
   
@@ -663,12 +634,14 @@
 
 
 
-  
 
 
 
   
-  
+
+
+
+
 
   
 
@@ -678,6 +651,7 @@
 
   
 
+  
 
   
 
