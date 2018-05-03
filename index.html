@@ -2,6 +2,9 @@
 
 
 
+
+
+
   
 
 
@@ -9,8 +12,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +44,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,42 +52,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="打死也不说">
-<meta property="og:url" content="http://b.javans.com/index.html">
-<meta property="og:site_name" content="打死也不说">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="打死也不说">
 
 
 
@@ -94,15 +79,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.3',
+    version: '6.2.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -114,12 +97,33 @@
 </script>
 
 
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="打死也不说">
+<meta property="og:url" content="http://b.javans.com/index.html">
+<meta property="og:site_name" content="打死也不说">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="打死也不说">
+
+
+
+
+
 
   <link rel="canonical" href="http://b.javans.com/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>打死也不说</title>
   
@@ -130,6 +134,34 @@
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -150,7 +182,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">打死也不说</span>
         <span class="logo-line-after"><i></i></span>
@@ -162,7 +194,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -170,35 +202,35 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Startseite</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archiv</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -206,12 +238,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -224,12 +267,14 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://b.javans.com/2018/04/06/after7month/">
+    <link itemprop="mainEntityOfPage" href="http://b.javans.com/2018/05/03/app_temporary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wooo">
@@ -248,23 +293,34 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/06/after7month/" itemprop="url">7个月了</a></h1>
+                <a class="post-title-link" href="/2018/05/03/app_temporary/" itemprop="url">
+                  Unbenannt
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-06T17:05:00+08:00">
-                2018-04-06
-              </time>
-            
 
+              
+                
+              
+
+              <time title="Post created: 2018-05-03 17:41:56" itemprop="dateCreated datePublished" datetime="2018-05-03T17:41:56+08:00">2018-05-03</time>
             
 
             
@@ -300,19 +356,14 @@
       
         
           
-            <h1 id="7个月了"><a href="#7个月了" class="headerlink" title="7个月了"></a>7个月了</h1><p>果真有7个月没再写过任何东西，这段时间经历了不少未体验过的身心历程，对于我这个理科生来不知道用什么文字来描述，先记录个流水，以后有时间再慢慢的补充。</p>
-<ul>
-<li>主线任务上的一次次的从希望到失望，最后到绝望，继而迷失了方向和目标，然后{?}的活着。</li>
-<li>痛风，思想惰性让在身体的不良因素积累到质变后，所承受的伤痛真的是不仅仅是“痛疼”，还有对末来生活中享受生中美食幸福感的痛失！</li>
-<li>日子过的真的很快，每天在自己的环境内能完成的事情与心理预期有极大的差距，破坏了自己心理的平衡也错失了时间的机会成本。</li>
-<li>不顺是真的存在的，但是没明白究竟是自己的主观意识造成的，还真的是有时运的存在？</li>
-</ul>
-<p>回顾想要记录的内容，居然没有一点点积极的事情，精神状态一直在一个灰暗的笼罩里，这也解释了为什么要把醒着的时间都放在晚上，可能从心理上就排斥了白天的阳光。<br>不说了，不写了，情绪能够随着趋势一点点的加速叠加，再继续下去会不会也会发生从量变到质变的转换，这真的怕是难以承受的了。</p>
-
+            
           
         
       
     </div>
+
+    
+
     
     
     
@@ -351,6 +402,334 @@
   
   
 
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://b.javans.com/2018/04/11/ANewStart/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wooo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="打死也不说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/11/ANewStart/" itemprop="url">
+                  失去追寻自己的能力
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2018-04-11 05:10:09" itemprop="dateCreated datePublished" datetime="2018-04-11T05:10:09+08:00">2018-04-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-05-03 17:26:48" itemprop="dateModified" datetime="2018-05-03T17:26:48+08:00">2018-05-03</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一场旅行、一个计划、一段休假，在经历了2年的时间后是不是该结束了？生活中它们结束了那新的开始又是什么？</p>
+<ul>
+<li>新的工作？</li>
+<li>新的目标？</li>
+<li>新的生活地点？</li>
+<li>新的生活方式？</li>
+</ul>
+<p>好像还是没有找到能发动自己的动力，从记事到上学，上学到工作，工作到现在的大部分时间是在遵循这个社会所倡导的生活（生存）方式：</p>
+<ul>
+<li>努力学习、争取第一</li>
+<li>努力工作、升职加薪</li>
+<li>做一个有理想有报负的四有新人</li>
+<li>做一个对家庭负责对社会有贡献的人</li>
+</ul>
+<p>大部分时间追随家长、老师、领导给定制的短期目标及远大理想，很少真正的问一问自己想要什么样的生活，对自己生活最简单的定义就是“需要一个别人羡慕的工作、家庭，通过自己的努力奋斗超越我父母的生活期望、超越老师们的预期、超越领导们的能力”。<br>且不说自己达成了什么，且等到这个年纪再去追随自己内心时，突然发现好像失去了这个能力。</p>
+<p>原以为在原定计划完成后，会有新的方向和斗志，但是随着计划的结果被判死刑，原有相关的准备、期许、动力、斗志也随之而去。<br>如果是在游戏中，一定会按暂停键中止游戏，但现实生活中只能顺势苟且的活着，等待下一个激情四射的想法、机遇或是动力的到来。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://b.javans.com/2018/04/06/after7month/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wooo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="打死也不说">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/06/after7month/" itemprop="url">
+                  7个月了
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Post created: 2018-04-06 17:05:45" itemprop="dateCreated datePublished" datetime="2018-04-06T17:05:45+08:00">2018-04-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-05-01 09:04:50" itemprop="dateModified" datetime="2018-05-01T09:04:50+08:00">2018-05-01</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="7个月了"><a href="#7个月了" class="headerlink" title="7个月了"></a>7个月了</h1><p>果真有7个月没再写过任何东西，这段时间经历了不少未体验过的身心历程，对于我这个理科生来不知道用什么文字来描述，先记录个流水，以后有时间再慢慢的补充。</p>
+<ul>
+<li>主线任务上的一次次的从希望到失望，最后到绝望，继而迷失了方向和目标，然后{?}的活着。</li>
+<li>痛风，思想惰性让在身体的不良因素积累到质变后，所承受的伤痛真的是不仅仅是“痛疼”，还有对末来生活中享受美食幸福感的痛失！</li>
+<li>日子过的真的很快，每天在自己的环境内能完成的事情与心理预期有极大的差距，破坏了自己心理的平衡也错失了时间的机会成本。</li>
+<li>不顺是真的存在的，但是没明白究竟是自己的主观意识造成的，还真的是有时运的存在？</li>
+</ul>
+<p>回顾想要记录的内容，居然没有一点点积极的事情，精神状态一直在一个灰暗的笼罩里，这也解释了为什么要把醒着的时间都放在晚上，可能从心理上就排斥了白天的阳光。<br>不说了，不写了，情绪能够随着趋势一点点的加速叠加，再继续下去会不会也会发生从量变到质变的转换，这真的怕是难以承受的了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -375,25 +754,52 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/10/11/first/" itemprop="url">人得说，话得写</a></h1>
+                <a class="post-title-link" href="/2017/10/11/first/" itemprop="url">
+                  人得说，话得写
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-11T13:36:20+08:00">
-                2017-10-11
-              </time>
+
+              
+                
+              
+
+              <time title="Post created: 2017-10-11 13:36:20" itemprop="dateCreated datePublished" datetime="2017-10-11T13:36:20+08:00">2017-10-11</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2018-05-01 19:34:36" itemprop="dateModified" datetime="2018-05-01T19:34:36+08:00">2018-05-01</time>
+              
             
           </span>
 
@@ -467,6 +873,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -505,9 +914,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -536,37 +942,38 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-            
-
-            
-
-          </nav>
-
           
-
-          <div class="links-of-author motion-element">
-            
-          </div>
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -587,16 +994,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">wooo</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.3.9</div>
 
 
 
@@ -604,12 +1015,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.2.0</div>
 
 
 
 
         
+
 
 
 
@@ -626,6 +1038,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -646,7 +1060,6 @@
 
 
 
-  
 
 
 
@@ -659,41 +1072,43 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
   
   
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+  
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
 
 
 
@@ -702,15 +1117,11 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
 
 
 
   
-
-
-  
-
 
 
 
@@ -735,12 +1146,23 @@
 
 
 
+
+
   
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+
+  
   
 
   
